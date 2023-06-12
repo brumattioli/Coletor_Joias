@@ -1,0 +1,15 @@
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\bin\Debug\net7.0\Coletor_Joias.exe
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\bin\Debug\net7.0\Coletor_Joias.deps.json
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\bin\Debug\net7.0\Coletor_Joias.runtimeconfig.json
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\bin\Debug\net7.0\Coletor_Joias.dll
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\bin\Debug\net7.0\Coletor_Joias.pdb
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\obj\Debug\net7.0\Coletor_Joias.csproj.AssemblyReference.cache
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\obj\Debug\net7.0\Coletor_Joias.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\obj\Debug\net7.0\Coletor_Joias.AssemblyInfoInputs.cache
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\obj\Debug\net7.0\Coletor_Joias.AssemblyInfo.cs
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\obj\Debug\net7.0\Coletor_Joias.csproj.CoreCompileInputs.cache
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\obj\Debug\net7.0\Coletor_Joias.dll
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\obj\Debug\net7.0\refint\Coletor_Joias.dll
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\obj\Debug\net7.0\Coletor_Joias.pdb
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\obj\Debug\net7.0\Coletor_Joias.genruntimeconfig.cache
+C:\Users\icaro\Desktop\Bru\Coletor\Coletor_Joias\obj\Debug\net7.0\ref\Coletor_Joias.dll
