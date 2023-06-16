@@ -29,25 +29,31 @@ namespace Coletor_Joias
         /// <summary>
         /// O mapa mantém um controle de qual fase o jogo está, e este atributo é inicializado em 1.
         /// </summary>
-        public static int faseAtual = 1;
+        public int faseAtual = 1;
 
         /// <summary>
         /// Este método atribui objetos do tipo Cell a todas as posições do mapa.
         /// </summary>
         /// <returns> Este método retorna o mapa que da início ao jogo. A matriz que da início ao jogo tem tamanho [10,10].</returns>
-        public Map inicioJogo()
+        public Map inicioJogo(Map m)
         {
-            Map mapa1 = new Map();
-            mapa1.tabuleiro = new Cell[10, 10];
+            int x;
+            int y;
+            /*if (faseAtual == 1)
+            {
+                x = 10;
+                y = 10;
+            }*/
+            m.tabuleiro = new Cell[10,10];
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 10; j++)
                 {
                     Cell celula = new Cell();
-                    mapa1.tabuleiro[i, j] = celula;
+                    m.tabuleiro[i, j] = celula;
                 }
             }
-            return mapa1;
+            return m;
         }
         /// <summary>
         /// Este método imprime todas as posições do mapa, a partir dos métodos sobrescritos ToString de cada elemento que faz parte do mapa.
@@ -75,12 +81,12 @@ namespace Coletor_Joias
                             Console.ForegroundColor = ConsoleColor.Cyan;
                             break;
                         case "$$": //arvore
-                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
                             break;
                         case "!!": //radioativo
                             Console.ForegroundColor = ConsoleColor.Magenta;
                             break;
-        ;            }
+                            ;            }
                     Console.Write(m.tabuleiro[i, j].ToString());
                     Console.ResetColor();
                 }
@@ -141,6 +147,9 @@ namespace Coletor_Joias
             agua = new Water(5, 6);
             m.tabuleiro[agua.x, agua.y] = agua;
 
+            Radioactive radioativo = new Radioactive(0, 5);
+            m.tabuleiro[radioativo.x, radioativo.y] = radioativo;
+
             Robot robo = new Robot(0, 0);
             m.tabuleiro[robo.x, robo.y] = robo;
         }
@@ -148,16 +157,20 @@ namespace Coletor_Joias
         /// Este método posiciona todos os elementos das fases 2 em diante no mapa, as joias, obstáculos e o robô. 
         /// A partir da segunda fase, os elementos são posicionados de maneira aleatória no mapa, portanto foi 
         /// analisada a proporção de cada elemento na fase inicial e esta mesma proporção de quantidade foi replicada 
-        /// para os elementos de cada tipo.
-        /// Este método aumenta as dimensões do mapa em 1 unidade a cada nova fase do jogo.
+        /// para os elementos de cada tipo nas fases seguintes.
+        /// Este método aumenta as dimensões do mapa em 1 unidade a cada nova fase do jogo até o limite de 30x30 de tamanho.
         /// Este método também imprime na tela uma mensagem quando o jogador passa de fase.
         /// </summary>
         /// <param name="m"></param>
         
         public void tabuleiroProximaFase(Map m)
         {
-            Console.WriteLine("Parabéns! Você passou a fase " + faseAtual + "!");  ///Imprime na tela uma mensagem quando o jogador passa de fase.
-            faseAtual++;                                                           ///Incrementa o contador da fase em 1 unidade.
+            Console.WriteLine("Parabéns! Você passou para a fase " + ++faseAtual + "!");  ///Incrementa o contador da fase em 1 unidade e imprime na tela uma mensagem quando o jogador passa de fase.
+
+            if (m.faseAtual == 2)
+            {
+                instrucoesFase2();
+            }
 
             m.tabuleiro = new Cell[m.tabuleiro.GetLength(0) + 1, m.tabuleiro.GetLength(0) + 1]; ///Aumenta as dimensões do mapa em 1 unidade a cada nova fase do jogo.
 
@@ -238,6 +251,13 @@ namespace Coletor_Joias
                 while (m.tabuleiro[radioativo.x, radioativo.y].GetType() != typeof(Cell)); ///Verifica se existe algum elemento já colocado na posição aleatória que foi criada.
                 m.tabuleiro[radioativo.x, radioativo.y] = radioativo;
             }
+        }
+        void instrucoesFase2()
+        {
+            Console.WriteLine();
+            Console.WriteLine("A partir da fase 2, há um novo elemento no mapa: O elemento Radioativo. Este elemento é representado pelo símbolo !!");
+            Console.WriteLine("Este elemento tira 10 pontos de energia quando o robô passa por alguma das posições adjacentes a ele e tira 30 pontos de energia caso o robô se mova para a mesma posição que ele.");
+            Console.WriteLine();
         }
     }
 }

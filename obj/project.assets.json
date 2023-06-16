@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\icaro\\Desktop\\Bru\\Coletor\\Coletor_Joias\\Coletor_Joias.csproj",
+      "projectUniqueName": "C:\\Users\\icaro\\Desktop\\Coletor_Joias\\Coletor_Joias.csproj",
       "projectName": "Coletor_Joias",
-      "projectPath": "C:\\Users\\icaro\\Desktop\\Bru\\Coletor\\Coletor_Joias\\Coletor_Joias.csproj",
+      "projectPath": "C:\\Users\\icaro\\Desktop\\Coletor_Joias\\Coletor_Joias.csproj",
       "packagesPath": "C:\\Users\\icaro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\icaro\\Desktop\\Bru\\Coletor\\Coletor_Joias\\obj\\",
+      "outputPath": "C:\\Users\\icaro\\Desktop\\Coletor_Joias\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\icaro\\AppData\\Roaming\\NuGet\\NuGet.Config",
