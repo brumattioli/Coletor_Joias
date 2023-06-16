@@ -1,5 +1,6 @@
 ﻿using Coletor_Joias;
 using System.Diagnostics.CodeAnalysis;
+using System.Security.Cryptography.X509Certificates;
 /// <summary>
 /// O método main é responsável por criar o mapa no início do jogo e por realizar a leitura dos eventos do teclado.
 /// </summary>
@@ -13,13 +14,15 @@ void Main()
         Bag = new List<Jewel>(), ///Inicialização da Bag do robô.
         energia = 5              ///Inicialização da energia em 5 pontos.
     };
-    m = m.inicioJogo();  ///Atribui objetos do tipo Cell a todas as posições do mapa.  
+    m = m.inicioJogo(m);  ///Atribui objetos do tipo Cell a todas as posições do mapa.
+    instrucoes();       ///Imprime na tela as instruções do jogo.
     m.tabuleiroFase1(m); ///Posiciona os elementos da fase 1 no mapa.
     m.mostraMapa(m);     ///Imprime as posições do mapa no console.
 
     bool running = true; ///Criação da variável running para definir quando o programa irá rodar e parar de rodar.
     do
-    {   r.valorTotal(r); ///Imprime o valor total de joias coletadas pelo robô.
+    {
+        r.valorTotal(r); ///Imprime o valor total de joias coletadas pelo robô.
         r.qtdTotal(r);   ///Imprime a quantidade total de joias coletadas pelo robô.
         r.qtdEnergia(r); ///Imprime a quantidade de energia coletada pelo robô.
         Console.WriteLine("Enter the command: ");
@@ -65,3 +68,54 @@ void Main()
     while (running);
 }
 Main();
+
+void instrucoes()
+{
+    Console.WriteLine();
+    Console.WriteLine("Seja bem-vindo ao Jewel Colector"); ///Instruções do jogo que serão mostradas na tela ao início do jogo
+    Console.WriteLine();
+    Console.WriteLine("Objetivo: Colete todas as joias antes que a sua energia acabe.");
+    Console.WriteLine();
+    Console.WriteLine("Como jogar: O robô (ME) se inicia na posição 0,0. Utilize as teclas w, a, s e d para movimentar o robô e a tecla g para coletar joias e recarregar suas energias.");
+    Console.WriteLine("As joias azuis (JB) e as árvores ($$) fornecem energia, quando estiver em posições adjacentes a elas, utilize a tecla g para coletar.");
+    Console.WriteLine("Ao coletar todas as joias de uma fase, você passará para a fase seguinte.");
+    Console.WriteLine("O jogo conta com obstáculos, como a água (##) e as árvores ($$), que você precisará desviar para coletar as joias.");
+    Console.WriteLine("Cuidado para não acabar sua energia ao desviar dos obstáculos!");
+    Console.WriteLine();
+    Console.WriteLine("Regras do jogo: A cada movimento, você perde 1 ponto de energia. Quando sua energia acabar, o jogo chegará ao fim.");
+    Console.WriteLine();
+}
+
+///Eventos
+
+class publisher ///classe que publica o evento
+{
+    public delegate void TeclaEventHandler(object sender, EventArgs args);
+    public event TeclaEventHandler Tecla;
+
+    protected virtual async void OnTecla()
+    {
+        switch (Console.ReadKey().KeyChar)
+        {
+            case 'a':
+                break;
+            case 's':
+                break;
+            case 'd':
+                break;
+            case 'w':
+                break;
+            case 'g':
+                break;
+        }
+    }
+}
+
+class subscriber ///classe que subscreve para receber o evento
+{
+    public void OnTeclaEventHandler(object sender, EventArgs args)
+    {
+        ///https://www.macoratti.net/18/01/c_event1.htm
+        ///https://www.macoratti.net/12/06/c_event1.htm
+    }
+}

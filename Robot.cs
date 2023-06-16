@@ -176,15 +176,15 @@ namespace Coletor_Joias
                 Console.WriteLine("Este movimento não é permitido");
                 Console.WriteLine();
             }
-                try     ///Verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para cima, se houver são tirados 10 pontos de energia do robô.
-            {
+            //    try     ///Verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para cima, se houver são tirados 10 pontos de energia do robô.
+            //{
                 if (m.tabuleiro[robo.x + 1, robo.y].GetType() == typeof(Radioactive)) r.energia -= 10; 
                 if (m.tabuleiro[robo.x - 1, robo.y].GetType() == typeof(Radioactive)) r.energia -= 10;
                 if (m.tabuleiro[robo.x, robo.y - 1].GetType() == typeof(Radioactive)) r.energia -= 10;
                 if (m.tabuleiro[robo.x, robo.y + 1].GetType() == typeof(Radioactive)) r.energia -= 10;
-            }
-            catch
-            { }
+            //}
+            //catch
+            //{ }
         }
         /// <summary>
         /// O método verifica a posição atual do robô, verifica se há algum objeto instransponível a esquerda dele e se não houver um objeto instransponível, ele realiza a movimentação para a esquerda. 
