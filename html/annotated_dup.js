@@ -12,5 +12,6 @@ var annotated_dup =
       [ "Robot", "class_coletor___joias_1_1_robot.html", "class_coletor___joias_1_1_robot" ],
       [ "Tree", "class_coletor___joias_1_1_tree.html", "class_coletor___joias_1_1_tree" ],
       [ "Water", "class_coletor___joias_1_1_water.html", "class_coletor___joias_1_1_water" ]
-    ] ]
+    ] ],
+    [ "Coletor", "class_coletor.html", null ]
 ];

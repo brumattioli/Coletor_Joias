@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Jewel_Collector: Coletor_Joias.Map Class Reference</title>
+<title>Jewel Collector: Coletor_Joias.Map Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Jewel_Collector
+   <div id="projectname">Jewel Collector
    </div>
   </td>
  </tr>
@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('class_coletor___joias_1_1_map.html',''
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_coletor___joias_1_1_map-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Coletor_Joias.Map Class Reference</div></div>
@@ -103,9 +103,9 @@ $(document).ready(function(){initNavTree('class_coletor___joias_1_1_map.html',''
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2536b6762c6b0e1d3a4dbbd0e1006367"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_coletor___joias_1_1_map.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_coletor___joias_1_1_map.html#a2536b6762c6b0e1d3a4dbbd0e1006367">inicioJogo</a> ()</td></tr>
-<tr class="memdesc:a2536b6762c6b0e1d3a4dbbd0e1006367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método atribui objetos do tipo Cell a todas as posições do mapa.  <br /></td></tr>
-<tr class="separator:a2536b6762c6b0e1d3a4dbbd0e1006367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9151944fcd5d0b39fbb0c3de770b6051"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_coletor___joias_1_1_map.html">Map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_coletor___joias_1_1_map.html#a9151944fcd5d0b39fbb0c3de770b6051">inicioJogo</a> (<a class="el" href="class_coletor___joias_1_1_map.html">Map</a> m)</td></tr>
+<tr class="memdesc:a9151944fcd5d0b39fbb0c3de770b6051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método atribui objetos do tipo Cell a todas as posições do mapa.  <br /></td></tr>
+<tr class="separator:a9151944fcd5d0b39fbb0c3de770b6051"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79bce90dada74b7c586457500e1e41ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_coletor___joias_1_1_map.html#a79bce90dada74b7c586457500e1e41ba">mostraMapa</a> (<a class="el" href="class_coletor___joias_1_1_map.html">Map</a> m)</td></tr>
 <tr class="memdesc:a79bce90dada74b7c586457500e1e41ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método imprime todas as posições do mapa, a partir dos métodos sobrescritos ToString de cada elemento que faz parte do mapa.  <br /></td></tr>
 <tr class="separator:a79bce90dada74b7c586457500e1e41ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,12 +113,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:add953b04d40815c5e580740240c2fdba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método posiciona todos os elementos da fase 1 no mapa, as joias, obstáculos e o robô.  <br /></td></tr>
 <tr class="separator:add953b04d40815c5e580740240c2fdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24fd648c4621a7912358bcc522269af6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_coletor___joias_1_1_map.html#a24fd648c4621a7912358bcc522269af6">tabuleiroProximaFase</a> (<a class="el" href="class_coletor___joias_1_1_map.html">Map</a> m)</td></tr>
-<tr class="memdesc:a24fd648c4621a7912358bcc522269af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método posiciona todos os elementos das fases 2 em diante no mapa, as joias, obstáculos e o robô. A partir da segunda fase, os elementos são posicionados de maneira aleatória no mapa, portanto foi analisada a proporção de cada elemento na fase inicial e esta mesma proporção de quantidade foi replicada para os elementos de cada tipo. Este método aumenta as dimensões do mapa em 1 unidade a cada nova fase do jogo. Este método também imprime na tela uma mensagem quando o jogador passa de fase.  <br /></td></tr>
+<tr class="memdesc:a24fd648c4621a7912358bcc522269af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Este método posiciona todos os elementos das fases 2 em diante no mapa, as joias, obstáculos e o robô. A partir da segunda fase, os elementos são posicionados de maneira aleatória no mapa, portanto foi analisada a proporção de cada elemento na fase inicial e esta mesma proporção de quantidade foi replicada para os elementos de cada tipo nas fases seguintes. Este método aumenta as dimensões do mapa em 1 unidade a cada nova fase do jogo até o limite de 30x30 de tamanho. Este método também imprime na tela uma mensagem quando o jogador passa de fase.  <br /></td></tr>
 <tr class="separator:a24fd648c4621a7912358bcc522269af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34915415898861bf0a57dbdaff880a05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_coletor___joias_1_1_map.html#a34915415898861bf0a57dbdaff880a05">instrucoesFase2</a> ()</td></tr>
+<tr class="memdesc:a34915415898861bf0a57dbdaff880a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">O método imprime na tela as instruções para a fase 2 do jogo.  <br /></td></tr>
+<tr class="separator:a34915415898861bf0a57dbdaff880a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a5d1aeeec2417d0e3bf2885d09193d2f2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_coletor___joias_1_1_map.html#a5d1aeeec2417d0e3bf2885d09193d2f2">faseAtual</a> = 1</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a5d1aeeec2417d0e3bf2885d09193d2f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_coletor___joias_1_1_map.html#a5d1aeeec2417d0e3bf2885d09193d2f2">faseAtual</a> = 1</td></tr>
 <tr class="memdesc:a5d1aeeec2417d0e3bf2885d09193d2f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">O mapa mantém um controle de qual fase o jogo está, e este atributo é inicializado em 1.  <br /></td></tr>
 <tr class="separator:a5d1aeeec2417d0e3bf2885d09193d2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -133,9 +136,11 @@ Properties</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A classe Map representa o tabuleiro do jogo, este é representado por uma matriz de duas dimensões, e representa o espaço no qual o robô se desloca para coletar joias e energia. Esta classe armazena todas as informações dos elementos do mapa. </p>
+
+<p class="definition">Definition at line <a class="el" href="_map_8cs_source.html#l00016">16</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2536b6762c6b0e1d3a4dbbd0e1006367" name="a2536b6762c6b0e1d3a4dbbd0e1006367"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2536b6762c6b0e1d3a4dbbd0e1006367">&#9670;&#160;</a></span>inicioJogo()</h2>
+<a id="a9151944fcd5d0b39fbb0c3de770b6051" name="a9151944fcd5d0b39fbb0c3de770b6051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9151944fcd5d0b39fbb0c3de770b6051">&#9670;&#160;</a></span>inicioJogo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,7 +148,8 @@ Properties</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_coletor___joias_1_1_map.html">Map</a> Coletor_Joias.Map.inicioJogo </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_coletor___joias_1_1_map.html">Map</a>&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -151,6 +157,29 @@ Properties</h2></td></tr>
 
 <p>Este método atribui objetos do tipo Cell a todas as posições do mapa. </p>
 <dl class="section return"><dt>Returns</dt><dd>Este método retorna o mapa que da início ao jogo. A matriz que da início ao jogo tem tamanho [10,10].</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_map_8cs_source.html#l00038">38</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
+</div>
+</div>
+<a id="a34915415898861bf0a57dbdaff880a05" name="a34915415898861bf0a57dbdaff880a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34915415898861bf0a57dbdaff880a05">&#9670;&#160;</a></span>instrucoesFase2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Coletor_Joias.Map.instrucoesFase2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>O método imprime na tela as instruções para a fase 2 do jogo. </p>
+
+<p class="definition">Definition at line <a class="el" href="_map_8cs_source.html#l00249">249</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
 
 </div>
 </div>
@@ -178,6 +207,8 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_map_8cs_source.html#l00056">56</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
 </div>
 </div>
 <a id="add953b04d40815c5e580740240c2fdba" name="add953b04d40815c5e580740240c2fdba"></a>
@@ -204,6 +235,8 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_map_8cs_source.html#l00094">94</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
 </div>
 </div>
 <a id="a24fd648c4621a7912358bcc522269af6" name="a24fd648c4621a7912358bcc522269af6"></a>
@@ -222,15 +255,14 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Este método posiciona todos os elementos das fases 2 em diante no mapa, as joias, obstáculos e o robô. A partir da segunda fase, os elementos são posicionados de maneira aleatória no mapa, portanto foi analisada a proporção de cada elemento na fase inicial e esta mesma proporção de quantidade foi replicada para os elementos de cada tipo. Este método aumenta as dimensões do mapa em 1 unidade a cada nova fase do jogo. Este método também imprime na tela uma mensagem quando o jogador passa de fase. </p>
+<p>Este método posiciona todos os elementos das fases 2 em diante no mapa, as joias, obstáculos e o robô. A partir da segunda fase, os elementos são posicionados de maneira aleatória no mapa, portanto foi analisada a proporção de cada elemento na fase inicial e esta mesma proporção de quantidade foi replicada para os elementos de cada tipo nas fases seguintes. Este método aumenta as dimensões do mapa em 1 unidade a cada nova fase do jogo até o limite de 30x30 de tamanho. Este método também imprime na tela uma mensagem quando o jogador passa de fase. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">m</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<p>Imprime na tela uma mensagem quando o jogador passa de fase.</p>
-<p>Incrementa o contador da fase em 1 unidade.</p>
+<p>Incrementa o contador da fase em 1 unidade e imprime na tela uma mensagem quando o jogador passa de fase.</p>
 <p>Aumenta as dimensões do mapa em 1 unidade a cada nova fase do jogo.</p>
 <p>Coloca um objeto do tipo Cell em cada posição do mapa.</p>
 <p>Inicializa o robô no mapa na posição [0,0].</p>
@@ -247,6 +279,8 @@ Properties</h2></td></tr>
 <p>Inicializa os elementos do tipo Radioactive no mapa a partir da geração de números aleatórios para a posição [x,y] na matriz. Este elemento é inserido no mapa a partir da fase 2. São inseridos 2 elementos deste tipo no mapa na fase 2, e a mesma proporção é repetida para todas as outras fases, levando em conta o tamanho total da matriz de cada fase.</p>
 <p>Verifica se existe algum elemento já colocado na posição aleatória que foi criada.</p>
 
+<p class="definition">Definition at line <a class="el" href="_map_8cs_source.html#l00156">156</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -255,22 +289,16 @@ Properties</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Coletor_Joias.Map.faseAtual = 1</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>O mapa mantém um controle de qual fase o jogo está, e este atributo é inicializado em 1. </p>
+
+<p class="definition">Definition at line <a class="el" href="_map_8cs_source.html#l00032">32</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
 
 </div>
 </div>
@@ -298,6 +326,8 @@ Properties</h2></td></tr>
 <p>O mapa mantém uma contagem de quantas joias ainda não foram coletadas, quando o contador é igual a zero, se inicia a próxima fase. </p>
 <p>Retorna a quantidade de joias que ainda não foram coletadas pelo robô.</p>
 
+<p class="definition">Definition at line <a class="el" href="_map_8cs_source.html#l00027">27</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
 </div>
 </div>
 <a id="aa39bd5d7efd7e2d3fa992799e4175e2e" name="aa39bd5d7efd7e2d3fa992799e4175e2e"></a>
@@ -323,10 +353,12 @@ Properties</h2></td></tr>
 <p>O tabuleiro representa uma matriz de duas dimensões. O tabuleiro armazena elementos do tipo Cell, como todos os elementos herdam da superClasse Cell, o mapa acomoda os elementos do tipo Jewel, Robot e Obstacle. </p>
 <p>O tabuleiro retorna uma matriz do tipo Cell. </p>
 
+<p class="definition">Definition at line <a class="el" href="_map_8cs_source.html#l00022">22</a> of file <a class="el" href="_map_8cs_source.html">Map.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/icaro/Desktop/Bru/Coletor/Coletor_Joias/<a class="el" href="_map_8cs.html">Map.cs</a></li>
+<li><a class="el" href="_map_8cs_source.html">Map.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

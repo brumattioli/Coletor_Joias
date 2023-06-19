@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Jewel_Collector: Coletor_Joias.Robot Class Reference</title>
+<title>Jewel Collector: Coletor_Joias.Robot Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Jewel_Collector
+   <div id="projectname">Jewel Collector
    </div>
   </td>
  </tr>
@@ -144,6 +144,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6479d436bc544641a693f193e1be1e56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_coletor___joias_1_1_robot.html#a6479d436bc544641a693f193e1be1e56">coletar</a> (<a class="el" href="class_coletor___joias_1_1_map.html">Map</a> m, <a class="el" href="class_coletor___joias_1_1_robot.html">Robot</a> r)</td></tr>
 <tr class="memdesc:a6479d436bc544641a693f193e1be1e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">O método é utilizado para que o robô possa coletar joias e energia. Este verifica a posição do robô no mapa, verifica se tem algo para ser coletado nas posições adjacentes a ele e coleta os objetos, adicionando energia à variável energia e as joias a Bag (Lista de joias) do robô.  <br /></td></tr>
 <tr class="separator:a6479d436bc544641a693f193e1be1e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57cfa955a0c19b7cd01f6a92eced49a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_coletor___joias_1_1_robot.html#af57cfa955a0c19b7cd01f6a92eced49a">verificaRadioativo</a> (<a class="el" href="class_coletor___joias_1_1_map.html">Map</a> m, <a class="el" href="class_coletor___joias_1_1_robot.html">Robot</a> r)</td></tr>
+<tr class="memdesc:af57cfa955a0c19b7cd01f6a92eced49a"><td class="mdescLeft">&#160;</td><td class="mdescRight">O método utiliza a posição do robô no mapa e verifica se há elemento radioativo nas posições adjacentes ao robô, se houver algum elemento radioativo nas posições adjacentes são retirados 10 pontos de energia.  <br /></td></tr>
+<tr class="separator:af57cfa955a0c19b7cd01f6a92eced49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e7b6ebb41027eafcbf6175828dae733"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_coletor___joias_1_1_robot.html#a1e7b6ebb41027eafcbf6175828dae733">valorTotal</a> (<a class="el" href="class_coletor___joias_1_1_robot.html">Robot</a> r)</td></tr>
 <tr class="memdesc:a1e7b6ebb41027eafcbf6175828dae733"><td class="mdescLeft">&#160;</td><td class="mdescRight">O método realiza a soma de todas as joias armazenadas na Bag do robô e imprime o valor total das joias coletadas.  <br /></td></tr>
 <tr class="separator:a1e7b6ebb41027eafcbf6175828dae733"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +179,8 @@ Properties</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A classe Robot é uma especialização da classe Cell. Ela representa o robô que se movimenta pelo mapa coletando joias e energia e desviando dos obstáculos. </p>
+
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00016">16</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a373af57c4902ffd281b04ef566e19f16" name="a373af57c4902ffd281b04ef566e19f16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a373af57c4902ffd281b04ef566e19f16">&#9670;&#160;</a></span>Robot() <span class="overload">[1/2]</span></h2>
@@ -212,6 +217,8 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00035">35</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
+
 </div>
 </div>
 <a id="af76bfcb238dee6562bb817df36d57333" name="af76bfcb238dee6562bb817df36d57333"></a>
@@ -230,6 +237,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Refere-se ao construtor do robô que não recebe parâmetros. </p>
+
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00044">44</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
 
 </div>
 </div>
@@ -276,7 +285,8 @@ Properties</h2></td></tr>
 <p>Inclusão do robô em sua nova posição no tabuleiro.</p>
 <p>Tira energia caso seja realizada a movimentação.</p>
 <p>Quando ele tentar ultrapassar os limites do mapa ou tentar se movimentar para a posição que tem uma joia ou obstáculo, será lançada uma exceção informando que o movimento não é permitido.</p>
-<p>Verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para baixo, se houver são tirados 10 pontos de energia do robô.</p>
+
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00109">109</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
 
 </div>
 </div>
@@ -322,7 +332,8 @@ Properties</h2></td></tr>
 <p>Inclusão do robô em sua nova posição no tabuleiro.</p>
 <p>Tira energia caso seja realizada a movimentação.</p>
 <p>Quando ele tentar ultrapassar os limites do mapa ou tentar se movimentar para a posição que tem uma joia ou obstáculo, será lançada uma exceção informando que o movimento não é permitido.</p>
-<p>Verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para cima, se houver são tirados 10 pontos de energia do robô.</p>
+
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00146">146</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
 
 </div>
 </div>
@@ -395,6 +406,8 @@ Properties</h2></td></tr>
 <p>Verifica se a quantidade de joias restantes é igual a zero, e se for, passa para a próxima fase do jogo.</p>
 <p>Se for um objeto do tipo Tree, incrementa a energia em 3 pontos.</p>
 
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00255">255</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
+
 </div>
 </div>
 <a id="a2c7ef130c8a356c6ac150bd5a2929dca" name="a2c7ef130c8a356c6ac150bd5a2929dca"></a>
@@ -439,7 +452,8 @@ Properties</h2></td></tr>
 <p>Inclusão do robô em sua nova posição no tabuleiro.</p>
 <p>Tira energia caso seja realizada a movimentação.</p>
 <p>Quando ele tentar ultrapassar os limites do mapa ou tentar se movimentar para a posição que tem uma joia ou obstáculo, será lançada uma exceção informando que o movimento não é permitido.</p>
-<p>Verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para a direita, se houver são tirados 10 pontos de energia do robô.</p>
+
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00219">219</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
 
 </div>
 </div>
@@ -485,7 +499,8 @@ Properties</h2></td></tr>
 <p>Inclusão do robô em sua nova posição no tabuleiro.</p>
 <p>Tira energia caso seja realizada a movimentação.</p>
 <p>Quando ele tentar ultrapassar os limites do mapa ou tentar se movimentar para a posição que tem uma joia ou obstáculo, será lançada uma exceção informando que o movimento não é permitido.</p>
-<p>Verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para a esquerda, se houver são tirados 10 pontos de energia do robô.</p>
+
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00182">182</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
 
 </div>
 </div>
@@ -531,6 +546,8 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00083">83</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
+
 </div>
 </div>
 <a id="a4e12b1b8b412f0f9208497a652ed6973" name="a4e12b1b8b412f0f9208497a652ed6973"></a>
@@ -558,6 +575,8 @@ Properties</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Retorna a posição [x,y] do robô no mapa.</dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00060">60</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
+
 </div>
 </div>
 <a id="a6ded434cf27ffdf8304a215bc2090253" name="a6ded434cf27ffdf8304a215bc2090253"></a>
@@ -583,6 +602,10 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<p>Se a quantidade de energia for maior ou igual a zero, exibir a quantidade de energia.</p>
+<p>Se não, exibir que a energia é igual a zero.</p>
+
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00372">372</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
 
 </div>
 </div>
@@ -610,6 +633,8 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00362">362</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
+
 </div>
 </div>
 <a id="a2a240eec3141eea03485926f6cef87f0" name="a2a240eec3141eea03485926f6cef87f0"></a>
@@ -636,6 +661,8 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00095">95</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
+
 </div>
 </div>
 <a id="aba4b82040cd0bdcfc22b7f2c74b13a26" name="aba4b82040cd0bdcfc22b7f2c74b13a26"></a>
@@ -655,6 +682,8 @@ Properties</h2></td></tr>
 
 <p>Este método sobrescreve o ToString(). </p>
 <dl class="section return"><dt>Returns</dt><dd>Um Robot é representado no mapa pelos caracteres ME.</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00050">50</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
 
 </div>
 </div>
@@ -682,6 +711,57 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00348">348</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
+
+</div>
+</div>
+<a id="af57cfa955a0c19b7cd01f6a92eced49a" name="af57cfa955a0c19b7cd01f6a92eced49a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af57cfa955a0c19b7cd01f6a92eced49a">&#9670;&#160;</a></span>verificaRadioativo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Coletor_Joias.Robot.verificaRadioativo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_coletor___joias_1_1_map.html">Map</a>&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_coletor___joias_1_1_robot.html">Robot</a>&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>O método utiliza a posição do robô no mapa e verifica se há elemento radioativo nas posições adjacentes ao robô, se houver algum elemento radioativo nas posições adjacentes são retirados 10 pontos de energia. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td></td></tr>
+    <tr><td class="paramname">r</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cria uma variável auxiliar do tipo robô para armazenar a posição do robô no mapa.</p>
+<p>Verifica a posição do robô no mapa e armazena na variável auxiliar do tipo robô.</p>
+<p>Verifica se acima está dentro dos limites do tabuleiro.</p>
+<p>Verifica se tem algum elemento acima do tipo Radioactive.</p>
+<p>Verifica se abaixo está dentro dos limites do tabuleiro.</p>
+<p>Verifica se tem algum elemento abaixo do tipo Radioactive.</p>
+<p>Verifica se a esquerda está dentro dos limites do tabuleiro.</p>
+<p>Verifica se tem algum elemento a esquerda do tipo Radioactive.</p>
+<p>Verifica se a esquerda está dentro dos limites do tabuleiro.</p>
+<p>Verifica se tem algum elemento a direita do tipo Radioactive.</p>
+
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00317">317</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -708,6 +788,8 @@ Properties</h2></td></tr>
 <p>O atributo Bag representa uma lista de joias que armazena as informações relacionas as joias que foram coletadas pelo robô, sendo essas informações o valor total e a quantidade de joias. </p>
 <p>Retorna uma lista do tipo Jewel.</p>
 
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00022">22</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
+
 </div>
 </div>
 <a id="af43649f7d10aa7853ce15c8a49475aba" name="af43649f7d10aa7853ce15c8a49475aba"></a>
@@ -733,10 +815,12 @@ Properties</h2></td></tr>
 <p>O robô pode coletar energia dos obstáculos que são do tipo Tree, das joias que são do tipo BlueJewel e perde parte de sua energia ao passar em posições adjacentes ou ao transpor objetos do tipo Radioactive. </p>
 <p>Retorna quanta energia armazenada o robô tem.</p>
 
+<p class="definition">Definition at line <a class="el" href="_robot_8cs_source.html#l00028">28</a> of file <a class="el" href="_robot_8cs_source.html">Robot.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/icaro/Desktop/Bru/Coletor/Coletor_Joias/<a class="el" href="_robot_8cs.html">Robot.cs</a></li>
+<li><a class="el" href="_robot_8cs_source.html">Robot.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

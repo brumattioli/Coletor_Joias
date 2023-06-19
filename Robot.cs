@@ -4,6 +4,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -129,18 +130,11 @@ namespace Coletor_Joias
             }
             catch
             {
-                Console.WriteLine("Este movimento não é permitido");
+                Console.WriteLine();
+                Console.WriteLine("Este movimento não é permitido. Tente outro movimento.");
                 Console.WriteLine();
             }
-            try ///Verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para baixo, se houver são tirados 10 pontos de energia do robô.
-            {
-                if (m.tabuleiro[robo.x + 1, robo.y].GetType() == typeof(Radioactive)) r.energia -= 10; 
-                if (m.tabuleiro[robo.x - 1, robo.y].GetType() == typeof(Radioactive)) r.energia -= 10;
-                if (m.tabuleiro[robo.x, robo.y - 1].GetType() == typeof(Radioactive)) r.energia -= 10;
-                if (m.tabuleiro[robo.x, robo.y + 1].GetType() == typeof(Radioactive)) r.energia -= 10;
-            }
-            catch
-            { }
+            verificaRadioativo(m, r);
         }
 
         /// <summary>
@@ -173,18 +167,11 @@ namespace Coletor_Joias
             }
             catch
             {
-                Console.WriteLine("Este movimento não é permitido");
+                Console.WriteLine();
+                Console.WriteLine("Este movimento não é permitido. Tente outro movimento.");
                 Console.WriteLine();
             }
-            //    try     ///Verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para cima, se houver são tirados 10 pontos de energia do robô.
-            //{
-                if (m.tabuleiro[robo.x + 1, robo.y].GetType() == typeof(Radioactive)) r.energia -= 10; 
-                if (m.tabuleiro[robo.x - 1, robo.y].GetType() == typeof(Radioactive)) r.energia -= 10;
-                if (m.tabuleiro[robo.x, robo.y - 1].GetType() == typeof(Radioactive)) r.energia -= 10;
-                if (m.tabuleiro[robo.x, robo.y + 1].GetType() == typeof(Radioactive)) r.energia -= 10;
-            //}
-            //catch
-            //{ }
+            verificaRadioativo(m, r);
         }
         /// <summary>
         /// O método verifica a posição atual do robô, verifica se há algum objeto instransponível a esquerda dele e se não houver um objeto instransponível, ele realiza a movimentação para a esquerda. 
@@ -216,18 +203,11 @@ namespace Coletor_Joias
             }
             catch
             {
-                Console.WriteLine("Este movimento não é permitido");
+                Console.WriteLine();
+                Console.WriteLine("Este movimento não é permitido. Tente outro movimento.");
                 Console.WriteLine();
             }
-            try ///Verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para a esquerda, se houver são tirados 10 pontos de energia do robô.
-            {
-                if (m.tabuleiro[robo.x + 1, robo.y].GetType() == typeof(Radioactive)) r.energia -= 10;
-                if (m.tabuleiro[robo.x - 1, robo.y].GetType() == typeof(Radioactive)) r.energia -= 10;
-                if (m.tabuleiro[robo.x, robo.y + 1].GetType() == typeof(Radioactive)) r.energia -= 10;
-                if (m.tabuleiro[robo.x, robo.y - 1].GetType() == typeof(Radioactive)) r.energia -= 10;
-            }
-            catch
-            { }
+            verificaRadioativo(m, r);
         }
 
         /// <summary>
@@ -260,18 +240,11 @@ namespace Coletor_Joias
             }
             catch
             {
-                Console.WriteLine("Este movimento não é permitido");
+                Console.WriteLine();
+                Console.WriteLine("Este movimento não é permitido. Tente outro movimento.");
                 Console.WriteLine();
             }
-            try ///Verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para a direita, se houver são tirados 10 pontos de energia do robô.
-            {
-                if (m.tabuleiro[robo.x + 1, robo.y].GetType() == typeof(Radioactive)) r.energia -= 10;
-                if (m.tabuleiro[robo.x - 1, robo.y].GetType() == typeof(Radioactive)) r.energia -= 10;
-                if (m.tabuleiro[robo.x, robo.y + 1].GetType() == typeof(Radioactive)) r.energia -= 10;
-                if (m.tabuleiro[robo.x, robo.y - 1].GetType() == typeof(Radioactive)) r.energia -= 10;
-            }
-            catch
-            { }
+            verificaRadioativo(m, r);
         }
 
         /// <summary>
@@ -337,6 +310,38 @@ namespace Coletor_Joias
         }
 
         /// <summary>
+        /// O método utiliza a posição do robô no mapa e verifica se há elemento radioativo nas posições adjacentes ao robô, se houver algum elemento radioativo nas posições adjacentes são retirados 10 pontos de energia.
+        /// </summary>
+        /// <param name="m"></param>
+        /// <param name="r"></param>
+        public void verificaRadioativo(Map m, Robot r)
+        {
+            Robot roboAux = new Robot(r.x, r.y); ///Cria uma variável auxiliar do tipo robô para armazenar a posição do robô no mapa.
+
+            roboAux = (Robot)roboAux.posicaoAtualRobo(m); ///Verifica a posição do robô no mapa e armazena na variável auxiliar do tipo robô.
+            if ((roboAux.x - 1) >= 0)  ///Verifica se acima está dentro dos limites do tabuleiro.
+                if (m.tabuleiro[roboAux.x - 1, roboAux.y].GetType() == typeof(Radioactive)) ///Verifica se tem algum elemento acima do tipo Radioactive.
+                {
+                    r.energia -= 10;
+                }
+            if ((roboAux.x + 1) < m.tabuleiro.GetLength(0))  ///Verifica se abaixo está dentro dos limites do tabuleiro.
+                if (m.tabuleiro[roboAux.x + 1, roboAux.y].GetType() == typeof(Radioactive)) ///Verifica se tem algum elemento abaixo do tipo Radioactive.
+                {
+                    r.energia -= 10;
+                }
+            if ((roboAux.y + 1) < m.tabuleiro.GetLength(0))  ///Verifica se a esquerda está dentro dos limites do tabuleiro.
+                if (m.tabuleiro[roboAux.x, roboAux.y + 1].GetType() == typeof(Radioactive)) ///Verifica se tem algum elemento a esquerda do tipo Radioactive.
+                {
+                    r.energia -= 10;
+                }
+            if ((roboAux.y - 1) >= 0) ///Verifica se a esquerda está dentro dos limites do tabuleiro.
+                if (m.tabuleiro[roboAux.x, roboAux.y - 1].GetType() == typeof(Radioactive)) ///Verifica se tem algum elemento a direita do tipo Radioactive.
+                {
+                    r.energia -= 10;
+                }
+        }
+
+        /// <summary>
         /// O método realiza a soma de todas as joias armazenadas na Bag do robô e imprime o valor total das joias coletadas.
         /// </summary>
         /// <param name="r"></param>
@@ -366,7 +371,11 @@ namespace Coletor_Joias
         /// <param name="r"></param>
         public void qtdEnergia(Robot r)
         {
-            Console.WriteLine("Quantidade de energia: " + r.energia);
+            if (r.energia >= 0) ///Se a quantidade de energia for maior ou igual a zero, exibir a quantidade de energia.
+            {
+                Console.WriteLine("Quantidade de energia: " + r.energia);
+            }
+            else Console.WriteLine("Quantidade de energia: 0"); ///Se não, exibir que a energia é igual a zero.
         }
     }
 }

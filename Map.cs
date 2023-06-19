@@ -37,13 +37,6 @@ namespace Coletor_Joias
         /// <returns> Este método retorna o mapa que da início ao jogo. A matriz que da início ao jogo tem tamanho [10,10].</returns>
         public Map inicioJogo(Map m)
         {
-            int x;
-            int y;
-            /*if (faseAtual == 1)
-            {
-                x = 10;
-                y = 10;
-            }*/
             m.tabuleiro = new Cell[10,10];
             for (int i = 0; i < 10; i++)
             {
@@ -147,9 +140,6 @@ namespace Coletor_Joias
             agua = new Water(5, 6);
             m.tabuleiro[agua.x, agua.y] = agua;
 
-            Radioactive radioativo = new Radioactive(0, 5);
-            m.tabuleiro[radioativo.x, radioativo.y] = radioativo;
-
             Robot robo = new Robot(0, 0);
             m.tabuleiro[robo.x, robo.y] = robo;
         }
@@ -165,6 +155,7 @@ namespace Coletor_Joias
         
         public void tabuleiroProximaFase(Map m)
         {
+            Console.WriteLine();
             Console.WriteLine("Parabéns! Você passou para a fase " + ++faseAtual + "!");  ///Incrementa o contador da fase em 1 unidade e imprime na tela uma mensagem quando o jogador passa de fase.
 
             if (m.faseAtual == 2)
@@ -252,7 +243,10 @@ namespace Coletor_Joias
                 m.tabuleiro[radioativo.x, radioativo.y] = radioativo;
             }
         }
-        void instrucoesFase2()
+        /// <summary>
+        /// O método imprime na tela as instruções para a fase 2 do jogo.
+        /// </summary>
+        public void instrucoesFase2()
         {
             Console.WriteLine();
             Console.WriteLine("A partir da fase 2, há um novo elemento no mapa: O elemento Radioativo. Este elemento é representado pelo símbolo !!");

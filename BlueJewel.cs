@@ -7,15 +7,10 @@ using System.Threading.Tasks;
 namespace Coletor_Joias
 {
     /// <summary>
-    /// A classe BlueJewel é uma especialização da classe Jewel, esta classe representa joias azuis contidas no mapa.
+    /// A classe BlueJewel é uma especialização da classe Jewel, esta classe representa joias azuis contidas no mapa. Uma joia do tipo BlueJewel fornece energia ao jogador quando coletada por ele.
     /// </summary>
     public class BlueJewel : Jewel
     {
-        /// <value>
-        /// Uma joia do tipo BlueJewel fornece energia ao jogador quando coletada por ele.
-        /// </value>
-        public int energia { get; set; }
-
         /// <summary>
         /// Este método cria uma nova BlueJewel.
         /// </summary>
@@ -24,7 +19,6 @@ namespace Coletor_Joias
             this.y = y;
             this.x = x;
             this.valor = 10;
-            this.energia = 5;
         }
         /// <summary>
         /// Este método sobrescreve o ToString().

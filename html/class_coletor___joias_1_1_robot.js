@@ -14,6 +14,7 @@ var class_coletor___joias_1_1_robot =
     [ "tiraEnergia", "class_coletor___joias_1_1_robot.html#a2a240eec3141eea03485926f6cef87f0", null ],
     [ "ToString", "class_coletor___joias_1_1_robot.html#aba4b82040cd0bdcfc22b7f2c74b13a26", null ],
     [ "valorTotal", "class_coletor___joias_1_1_robot.html#a1e7b6ebb41027eafcbf6175828dae733", null ],
+    [ "verificaRadioativo", "class_coletor___joias_1_1_robot.html#af57cfa955a0c19b7cd01f6a92eced49a", null ],
     [ "Bag", "class_coletor___joias_1_1_robot.html#a1c421f8bc0beea6b32b717e78804e7b4", null ],
     [ "energia", "class_coletor___joias_1_1_robot.html#af43649f7d10aa7853ce15c8a49475aba", null ]
 ];

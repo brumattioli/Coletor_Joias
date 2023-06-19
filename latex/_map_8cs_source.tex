@@ -1,0 +1,223 @@
+\doxysection{Map.\+cs}
+\hypertarget{_map_8cs_source}{}\label{_map_8cs_source}\mbox{\hyperlink{_map_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Runtime.InteropServices;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Runtime.Serialization.Formatters;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_coletor___joias}{Coletor\_Joias}}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00016}\mbox{\hyperlink{class_coletor___joias_1_1_map}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00022}\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}[,]\ \mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00027}\mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{qtdJewel}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00032}\mbox{\hyperlink{class_coletor___joias_1_1_map_a5d1aeeec2417d0e3bf2885d09193d2f2}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_coletor___joias_1_1_map_a5d1aeeec2417d0e3bf2885d09193d2f2}{faseAtual}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00038}\mbox{\hyperlink{class_coletor___joias_1_1_map_a9151944fcd5d0b39fbb0c3de770b6051}{00038}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}\ \mbox{\hyperlink{class_coletor___joias_1_1_map_a9151944fcd5d0b39fbb0c3de770b6051}{inicioJogo}}(\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}\ m)}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ m.tabuleiro\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}[10,10];}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 10;\ i++)}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 10;\ j++)}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}\ celula\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[i,\ j]\ =\ celula;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00056}\mbox{\hyperlink{class_coletor___joias_1_1_map_a79bce90dada74b7c586457500e1e41ba}{00056}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_coletor___joias_1_1_map_a79bce90dada74b7c586457500e1e41ba}{mostraMapa}}(\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}\ m)}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0);\ i++)}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0);\ j++)}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[i,\ j].\mbox{\hyperlink{class_coletor___joias_1_1_cell_a9f25a18a1dfac067aa462d8c748c532c}{ToString}}().Trim())}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}JR"{}}:}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ForegroundColor\ =\ ConsoleColor.DarkRed;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}JB"{}}:}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ForegroundColor\ =\ ConsoleColor.DarkBlue;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}JG"{}}:}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ForegroundColor\ =\ ConsoleColor.DarkGreen;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}\#\#"{}}:\ \textcolor{comment}{//agua}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ForegroundColor\ =\ ConsoleColor.Cyan;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}\$\$"{}}:\ \textcolor{comment}{//arvore}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ForegroundColor\ =\ ConsoleColor.DarkYellow;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}!!"{}}:\ \textcolor{comment}{//radioativo}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ForegroundColor\ =\ ConsoleColor.Magenta;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[i,\ j].\mbox{\hyperlink{class_coletor___joias_1_1_cell_a9f25a18a1dfac067aa462d8c748c532c}{ToString}}());}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ResetColor();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00094}\mbox{\hyperlink{class_coletor___joias_1_1_map_add953b04d40815c5e580740240c2fdba}{00094}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_coletor___joias_1_1_map_add953b04d40815c5e580740240c2fdba}{tabuleiroFase1}}(\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}\ m)}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_red_jewel}{RedJewel}}\ joiaVermelha\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_red_jewel}{RedJewel}}(1,\ 9);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaVermelha.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaVermelha.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ joiaVermelha;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{qtdJewel}}++;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ joiaVermelha\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_red_jewel}{RedJewel}}(8,\ 8);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaVermelha.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaVermelha.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ joiaVermelha;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{qtdJewel}}++;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_green_jewel}{GreenJewel}}\ joiaVerde\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_green_jewel}{GreenJewel}}(9,\ 1);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaVerde.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaVerde.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ joiaVerde;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{qtdJewel}}++;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ joiaVerde\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_green_jewel}{GreenJewel}}(7,\ 6);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaVerde.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaVerde.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ joiaVerde;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{qtdJewel}}++;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_blue_jewel}{BlueJewel}}\ joiaAzul\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_blue_jewel}{BlueJewel}}(3,\ 4);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaAzul.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaAzul.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ joiaAzul;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{qtdJewel}}++;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ joiaAzul\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_blue_jewel}{BlueJewel}}(2,\ 1);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaAzul.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaAzul.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ joiaAzul;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{qtdJewel}}++;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_tree}{Tree}}\ arvore\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_tree}{Tree}}(5,\ 9);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ arvore;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ arvore\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_tree}{Tree}}(3,\ 9);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ arvore;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ arvore\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_tree}{Tree}}(8,\ 3);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ arvore;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ arvore\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_tree}{Tree}}(2,\ 5);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ arvore;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ arvore\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_tree}{Tree}}(1,\ 4);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ arvore;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_water}{Water}}\ agua\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_water}{Water}}(5,\ 0);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ agua;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ agua\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_water}{Water}}(5,\ 1);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ agua;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ agua\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_water}{Water}}(5,\ 2);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ agua;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ agua\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_water}{Water}}(5,\ 3);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ agua;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ agua\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_water}{Water}}(5,\ 4);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ agua;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ agua\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_water}{Water}}(5,\ 5);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ agua;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ agua\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_water}{Water}}(5,\ 6);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ agua;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}\ robo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}(0,\ 0);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[robo.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ robo.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ robo;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00156}\mbox{\hyperlink{class_coletor___joias_1_1_map_a24fd648c4621a7912358bcc522269af6}{00156}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_coletor___joias_1_1_map_a24fd648c4621a7912358bcc522269af6}{tabuleiroProximaFase}}(\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}\ m)}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Parabéns!\ Você\ passou\ para\ a\ fase\ "{}}\ +\ ++\mbox{\hyperlink{class_coletor___joias_1_1_map_a5d1aeeec2417d0e3bf2885d09193d2f2}{faseAtual}}\ +\ \textcolor{stringliteral}{"{}!"{}});\ \ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a5d1aeeec2417d0e3bf2885d09193d2f2}{faseAtual}}\ ==\ 2)}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_map_a34915415898861bf0a57dbdaff880a05}{instrucoesFase2}}();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ m.tabuleiro\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}[m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)\ +\ 1,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)\ +\ 1];\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0);\ i++)\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0);\ j++)}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}\ celula\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[i,j]\ =\ celula;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}\ robo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}(0,\ 0);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[robo.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ robo.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ robo;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ Random\ rand\ =\ \textcolor{keyword}{new}\ Random();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ Math.Round((0.07\ *\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.Length));\ i++)\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_water}{Water}}\ agua;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ agua\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_water}{Water}}(rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)),\ rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)));}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}].GetType()\ !=\ typeof(\mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}));\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ agua.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ agua;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ Math.Round((0.05\ *\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.Length));\ i++)\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_tree}{Tree}}\ arvore;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arvore\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_tree}{Tree}}(rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)),\ rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)));}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}].GetType()\ !=\ typeof(\mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}));\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ arvore.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ arvore;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ Math.Round(0.02\ *\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.Length);\ i++)\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_red_jewel}{RedJewel}}\ joiaVermelha;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joiaVermelha\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_red_jewel}{RedJewel}}(rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)),\ rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)));}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaVermelha.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaVermelha.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}].GetType()\ !=\ typeof(\mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}));\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaVermelha.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaVermelha.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ joiaVermelha;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{qtdJewel}}++;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ Math.Round(0.02\ *\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.Length);\ i++)\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_green_jewel}{GreenJewel}}\ joiaVerde;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joiaVerde\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_green_jewel}{GreenJewel}}(rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)),\ rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)));}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaVerde.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaVerde.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}].GetType()\ !=\ typeof(\mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}));\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaVerde.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaVerde.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ joiaVerde;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{qtdJewel}}++;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ Math.Round(0.02\ *\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.Length);\ i++)\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_blue_jewel}{BlueJewel}}\ joiaAzul;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ joiaAzul\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_blue_jewel}{BlueJewel}}(rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)),\ rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)));}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaAzul.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaAzul.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}].GetType()\ !=\ typeof(\mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}));\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[joiaAzul.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ joiaAzul.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ joiaAzul;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{qtdJewel}}++;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ Math.Round((0.02\ *\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.Length));\ i++)\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_radioactive}{Radioactive}}\ radioativo;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ radioativo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_radioactive}{Radioactive}}(rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)),\ rand.Next(0,\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}.GetLength(0)));}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[radioativo.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ radioativo.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}].GetType()\ !=\ typeof(\mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}));\ }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}[radioativo.\mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}},\ radioativo.\mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}]\ =\ radioativo;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00249}\mbox{\hyperlink{class_coletor___joias_1_1_map_a34915415898861bf0a57dbdaff880a05}{00249}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_coletor___joias_1_1_map_a34915415898861bf0a57dbdaff880a05}{instrucoesFase2}}()}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}A\ partir\ da\ fase\ 2,\ há\ um\ novo\ elemento\ no\ mapa:\ O\ elemento\ Radioativo.\ Este\ elemento\ é\ representado\ pelo\ símbolo\ !!"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Este\ elemento\ tira\ 10\ pontos\ de\ energia\ quando\ o\ robô\ passa\ por\ alguma\ das\ posições\ adjacentes\ a\ ele\ e\ tira\ 30\ pontos\ de\ energia\ caso\ o\ robô\ se\ mova\ para\ a\ mesma\ posição\ que\ ele."{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00256}00256\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00257}00257\ \}}
+
+\end{DoxyCode}

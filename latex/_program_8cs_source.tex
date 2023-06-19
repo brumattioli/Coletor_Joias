@@ -1,0 +1,119 @@
+\doxysection{Program.\+cs}
+\hypertarget{_program_8cs_source}{}\label{_program_8cs_source}\mbox{\hyperlink{_program_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_coletor___joias}{Coletor\_Joias}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Diagnostics.CodeAnalysis;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Net;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Security.Cryptography.X509Certificates;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00009}\mbox{\hyperlink{class_coletor}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_coletor}{Coletor}}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00011}00011\ \ \ \ \ delegate\ \textcolor{keywordtype}{void}\ baixo(\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}\ m,\ \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}\ r);\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ baixo\ OnBaixo;\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00014}00014\ \ \ \ \ delegate\ \textcolor{keywordtype}{void}\ cima(\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}\ m,\ \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}\ r);\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ cima\ OnCima;\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00017}00017\ \ \ \ \ delegate\ \textcolor{keywordtype}{void}\ esquerda(\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}\ m,\ \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}\ r);\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ esquerda\ OnEsquerda;\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00020}00020\ \ \ \ \ delegate\ \textcolor{keywordtype}{void}\ direita(\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}\ m,\ \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}\ r);\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ direita\ OnDireita;\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00023}00023\ \ \ \ \ delegate\ \textcolor{keywordtype}{void}\ coletar(\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}\ m,\ \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}\ r);\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ coletar\ OnColetar;\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00030}\mbox{\hyperlink{class_coletor_a6b8abee3a57ed43a315749658b27a06e}{00030}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_coletor_a6b8abee3a57ed43a315749658b27a06e}{Main}}()\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}\ m\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}();\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ m.qtdJewel\ =\ 0;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}\ r\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ Bag\ =\ \textcolor{keyword}{new}\ List<Jewel>(),\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ energia\ =\ 5\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ m\ =\ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a9151944fcd5d0b39fbb0c3de770b6051}{inicioJogo}}(m);\ \ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_coletor_a4b13c0f9a379fe2e87adcaa355fad185}{instrucoes}}();\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_add953b04d40815c5e580740240c2fdba}{tabuleiroFase1}}(m);\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a79bce90dada74b7c586457500e1e41ba}{mostraMapa}}(m);\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ running\ =\ \textcolor{keyword}{true};\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ r.\mbox{\hyperlink{class_coletor___joias_1_1_robot_a1e7b6ebb41027eafcbf6175828dae733}{valorTotal}}(r);\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ r.\mbox{\hyperlink{class_coletor___joias_1_1_robot_aa913eb63d96a844cb5482854943e82e4}{qtdTotal}}(r);\ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ r.\mbox{\hyperlink{class_coletor___joias_1_1_robot_a6ded434cf27ffdf8304a215bc2090253}{qtdEnergia}}(r);\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Enter\ the\ command:\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ OnBaixo\ =\ r.\mbox{\hyperlink{class_coletor___joias_1_1_robot_a5615b1fea3e42248b47a6d89f9e9e89c}{baixo}};\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ OnCima\ =\ r.\mbox{\hyperlink{class_coletor___joias_1_1_robot_a0aa7a509a51f4299ceed8b4689440309}{cima}};\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ OnDireita\ =\ r.\mbox{\hyperlink{class_coletor___joias_1_1_robot_a2c7ef130c8a356c6ac150bd5a2929dca}{direita}};\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ OnEsquerda\ =\ r.\mbox{\hyperlink{class_coletor___joias_1_1_robot_ae8f7b9d6ad83834eb07851b5b047022a}{esquerda}};\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ OnColetar\ =\ r.\mbox{\hyperlink{class_coletor___joias_1_1_robot_a6479d436bc544641a693f193e1be1e56}{coletar}};\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (r.\mbox{\hyperlink{class_coletor___joias_1_1_robot_af43649f7d10aa7853ce15c8a49475aba}{energia}}\ <=\ 0)\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ running\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}A\ energia\ do\ robô\ acabou!\ :(\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Fim\ do\ jogo"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a5d1aeeec2417d0e3bf2885d09193d2f2}{faseAtual}}\ >\ 21)\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ running\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Parabéns!\ Você\ chegou\ ao\ final\ do\ jogo"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (Console.ReadKey().KeyChar)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'s'}:\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnBaixo?.Invoke(m,\ r);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'a'}:\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnEsquerda?.Invoke(m,\ r);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'d'}:\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnDireita?.Invoke(m,\ r);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'w'}:\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnCima?.Invoke(m,\ r);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'g'}:\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnColetar?.Invoke(m,\ r);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'q'}:\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ running\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m.\mbox{\hyperlink{class_coletor___joias_1_1_map_a79bce90dada74b7c586457500e1e41ba}{mostraMapa}}(m);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (running);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00106}\mbox{\hyperlink{class_coletor_a4b13c0f9a379fe2e87adcaa355fad185}{00106}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_coletor_a4b13c0f9a379fe2e87adcaa355fad185}{instrucoes}}()}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00107}00107\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Seja\ bem-\/vindo\ ao\ Jewel\ Colector!"{}});\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Objetivo:\ Colete\ todas\ as\ joias\ antes\ que\ a\ sua\ energia\ acabe."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Como\ jogar:\ O\ robô\ (ME)\ se\ inicia\ na\ posição\ 0,0.\ Utilize\ as\ teclas\ w,\ a,\ s\ e\ d\ para\ movimentar\ o\ robô\ e\ a\ tecla\ g\ para\ coletar\ joias\ e\ recarregar\ suas\ energias."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}As\ joias\ azuis\ (JB)\ e\ as\ árvores\ (\$\$)\ fornecem\ energia,\ quando\ estiver\ em\ posições\ adjacentes\ a\ elas,\ utilize\ a\ tecla\ g\ para\ coletar."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Utilize\ também\ a\ tecla\ g\ para\ coletar\ as\ joias\ do\ mapa.\ Ao\ coletar\ todas\ as\ joias\ de\ uma\ fase,\ você\ passará\ para\ a\ fase\ seguinte."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}O\ jogo\ conta\ com\ obstáculos,\ como\ a\ água\ (\#\#)\ e\ as\ árvores\ (\$\$),\ que\ você\ precisará\ desviar\ para\ coletar\ as\ joias."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Cuidado\ para\ não\ acabar\ sua\ energia\ ao\ desviar\ dos\ obstáculos!"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Regras\ do\ jogo:\ A\ cada\ movimento,\ você\ perde\ 1\ ponto\ de\ energia.\ Quando\ sua\ energia\ acabar,\ o\ jogo\ chegará\ ao\ fim."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Boa\ sorte\ e\ divirta-\/se!\ :)\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Trabalho\ realizado\ por\ Bruna\ Mattioli\ de\ Oliveira."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00123}00123\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00124}00124\ \}}
+
+\end{DoxyCode}
