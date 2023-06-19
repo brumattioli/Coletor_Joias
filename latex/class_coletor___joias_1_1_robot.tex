@@ -1,0 +1,555 @@
+\doxysection{Coletor\+\_\+\+Joias.\+Robot Class Reference}
+\hypertarget{class_coletor___joias_1_1_robot}{}\label{class_coletor___joias_1_1_robot}\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+
+
+A classe Robot é uma especialização da classe Cell. Ela representa o robô que se movimenta pelo mapa coletando joias e energia e desviando dos obstáculos.  
+
+
+Inheritance diagram for Coletor\+\_\+\+Joias.\+Robot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coletor___joias_1_1_robot}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_coletor___joias_1_1_robot_a373af57c4902ffd281b04ef566e19f16}{Robot}} (int \mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}}, int \mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}})
+\begin{DoxyCompactList}\small\item\em Refere-\/se ao construtor do robô que recebe a posição \mbox{[}x,y\mbox{]} do robô no mapa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_coletor___joias_1_1_robot_af76bfcb238dee6562bb817df36d57333}{Robot}} ()
+\begin{DoxyCompactList}\small\item\em Refere-\/se ao construtor do robô que não recebe parâmetros. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_coletor___joias_1_1_robot_aba4b82040cd0bdcfc22b7f2c74b13a26}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Este método sobrescreve o To\+String(). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}} \mbox{\hyperlink{class_coletor___joias_1_1_robot_a4e12b1b8b412f0f9208497a652ed6973}{posicao\+Atual\+Robo}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m)
+\begin{DoxyCompactList}\small\item\em O método verifica em qual posição o robô se encontra no mapa para que seja possível realizar as movimentações. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_robot_aea734142ac4bf1f8264dd8a889b4d875}{movimentar}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m, int \mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}}, int \mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}})
+\begin{DoxyCompactList}\small\item\em O método sobrescreve a posição dada com um elemento do tipo Cell, com a string \"{}-\/-\/\"{} na posição anterior do robô. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_robot_a2a240eec3141eea03485926f6cef87f0}{tira\+Energia}} (\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}} r)
+\begin{DoxyCompactList}\small\item\em O método tira 1 ponto de energia do robô a cada movimentação realizada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_robot_a5615b1fea3e42248b47a6d89f9e9e89c}{baixo}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m, \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}} r)
+\begin{DoxyCompactList}\small\item\em O método verifica a posição atual do robô, verifica se há algum objeto instransponível abaixo dele e se não houver um objeto instransponível, ele realiza a movimentação para baixo. Este método também verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para baixo, se houver são tirados 10 pontos de energia do robô. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_robot_a0aa7a509a51f4299ceed8b4689440309}{cima}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m, \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}} r)
+\begin{DoxyCompactList}\small\item\em O método verifica a posição atual do robô, verifica se há algum objeto instransponível acima dele e se não houver um objeto instransponível, ele realiza a movimentação para cima. Este método também verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para cima, se houver são tirados 10 pontos de energia do robô. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_robot_ae8f7b9d6ad83834eb07851b5b047022a}{esquerda}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m, \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}} r)
+\begin{DoxyCompactList}\small\item\em O método verifica a posição atual do robô, verifica se há algum objeto instransponível a esquerda dele e se não houver um objeto instransponível, ele realiza a movimentação para a esquerda. Este método também verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para a esquerda, se houver são tirados 10 pontos de energia do robô. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_robot_a2c7ef130c8a356c6ac150bd5a2929dca}{direita}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m, \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}} r)
+\begin{DoxyCompactList}\small\item\em O método verifica a posição atual do robô, verifica se há algum objeto instransponível a direita dele e se não houver um objeto instransponível, ele realiza a movimentação para a direita. Este método também verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para a direita, se houver são tirados 10 pontos de energia do robô. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_robot_a6479d436bc544641a693f193e1be1e56}{coletar}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m, \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}} r)
+\begin{DoxyCompactList}\small\item\em O método é utilizado para que o robô possa coletar joias e energia. Este verifica a posição do robô no mapa, verifica se tem algo para ser coletado nas posições adjacentes a ele e coleta os objetos, adicionando energia à variável energia e as joias a Bag (Lista de joias) do robô. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_robot_af57cfa955a0c19b7cd01f6a92eced49a}{verifica\+Radioativo}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m, \mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}} r)
+\begin{DoxyCompactList}\small\item\em O método utiliza a posição do robô no mapa e verifica se há elemento radioativo nas posições adjacentes ao robô, se houver algum elemento radioativo nas posições adjacentes são retirados 10 pontos de energia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_robot_a1e7b6ebb41027eafcbf6175828dae733}{valor\+Total}} (\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}} r)
+\begin{DoxyCompactList}\small\item\em O método realiza a soma de todas as joias armazenadas na Bag do robô e imprime o valor total das joias coletadas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_robot_aa913eb63d96a844cb5482854943e82e4}{qtd\+Total}} (\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}} r)
+\begin{DoxyCompactList}\small\item\em O método realiza a contagem de todas as joias armazenadas na Bag do robô e imprime a quantidade total das joias coletadas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_robot_a6ded434cf27ffdf8304a215bc2090253}{qtd\+Energia}} (\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}} r)
+\begin{DoxyCompactList}\small\item\em O método imprime a quantidade de energia armazenada pelo robô. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_coletor___joias_1_1_cell}{Coletor\+\_\+\+Joias.\+Cell}}}
+\begin{DoxyCompactItemize}
+\item 
+override string \mbox{\hyperlink{class_coletor___joias_1_1_cell_a9f25a18a1dfac067aa462d8c748c532c}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Este método sobrescreve o To\+String(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_coletor___joias_1_1_jewel}{Jewel}} $>$ \mbox{\hyperlink{class_coletor___joias_1_1_robot_a1c421f8bc0beea6b32b717e78804e7b4}{Bag}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em O atributo Bag representa uma lista de joias que armazena as informações relacionas as joias que foram coletadas pelo robô, sendo essas informações o valor total e a quantidade de joias. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_coletor___joias_1_1_robot_af43649f7d10aa7853ce15c8a49475aba}{energia}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em O robô pode coletar energia dos obstáculos que são do tipo Tree, das joias que são do tipo Blue\+Jewel e perde parte de sua energia ao passar em posições adjacentes ou ao transpor objetos do tipo Radioactive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_coletor___joias_1_1_cell}{Coletor\+\_\+\+Joias.\+Cell}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_coletor___joias_1_1_cell_a33c807e56a46a3615b217d6cbf3974ee}{x}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em O mapa do jogo trata-\/se de uma matriz com duas dimensões, a variável x representa as linhas desta matriz. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_coletor___joias_1_1_cell_ad158f64b20970208b392c883130d71d8}{y}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em O mapa do jogo trata-\/se de uma matriz com duas dimensões, a variável y representa as colunas desta matriz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe Robot é uma especialização da classe Cell. Ela representa o robô que se movimenta pelo mapa coletando joias e energia e desviando dos obstáculos. 
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_coletor___joias_1_1_robot_a373af57c4902ffd281b04ef566e19f16}\label{class_coletor___joias_1_1_robot_a373af57c4902ffd281b04ef566e19f16} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{Robot()}{Robot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Coletor\+\_\+\+Joias.\+Robot.\+Robot (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Refere-\/se ao construtor do robô que recebe a posição \mbox{[}x,y\mbox{]} do robô no mapa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_af76bfcb238dee6562bb817df36d57333}\label{class_coletor___joias_1_1_robot_af76bfcb238dee6562bb817df36d57333} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{Robot()}{Robot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Coletor\+\_\+\+Joias.\+Robot.\+Robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Refere-\/se ao construtor do robô que não recebe parâmetros. 
+
+
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_coletor___joias_1_1_robot_a5615b1fea3e42248b47a6d89f9e9e89c}\label{class_coletor___joias_1_1_robot_a5615b1fea3e42248b47a6d89f9e9e89c} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!baixo@{baixo}}
+\index{baixo@{baixo}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{baixo()}{baixo()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Robot.\+baixo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m,  }\item[{\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}}]{r }\end{DoxyParamCaption})}
+
+
+
+O método verifica a posição atual do robô, verifica se há algum objeto instransponível abaixo dele e se não houver um objeto instransponível, ele realiza a movimentação para baixo. Este método também verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para baixo, se houver são tirados 10 pontos de energia do robô. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em r} & \\
+\hline
+\end{DoxyParams}
+Verifico a posição atual do robô no mapa
+
+Verifico se não há nenhum elemento intransponível no local para qual o robô irá se movimentar.
+
+Se a posição que o robô irá sobrepor for um elemento radioativo, o robô perde 30 pontos de energia.
+
+Insiro \"{}-\/-\/\"{} na posição atual do robô.
+
+Para onde o robô vai, nova posição do robô no tabuleiro.
+
+Inclusão do robô em sua nova posição no tabuleiro.
+
+Tira energia caso seja realizada a movimentação.
+
+Quando ele tentar ultrapassar os limites do mapa ou tentar se movimentar para a posição que tem uma joia ou obstáculo, será lançada uma exceção informando que o movimento não é permitido.
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00109}{109}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_a0aa7a509a51f4299ceed8b4689440309}\label{class_coletor___joias_1_1_robot_a0aa7a509a51f4299ceed8b4689440309} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!cima@{cima}}
+\index{cima@{cima}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{cima()}{cima()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Robot.\+cima (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m,  }\item[{\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}}]{r }\end{DoxyParamCaption})}
+
+
+
+O método verifica a posição atual do robô, verifica se há algum objeto instransponível acima dele e se não houver um objeto instransponível, ele realiza a movimentação para cima. Este método também verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para cima, se houver são tirados 10 pontos de energia do robô. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em r} & \\
+\hline
+\end{DoxyParams}
+Verifico a posição atual do robô no mapa
+
+Verifico se não há nenhum elemento intransponível no local para qual o robô irá se movimentar.
+
+Se a posição que o robô irá sobrepor for um elemento radioativo, o robô perde 30 pontos de energia.
+
+Insiro \"{}-\/-\/\"{} na posição atual do robô.
+
+Para onde o robô vai, nova posição do robô no tabuleiro.
+
+Inclusão do robô em sua nova posição no tabuleiro.
+
+Tira energia caso seja realizada a movimentação.
+
+Quando ele tentar ultrapassar os limites do mapa ou tentar se movimentar para a posição que tem uma joia ou obstáculo, será lançada uma exceção informando que o movimento não é permitido.
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00146}{146}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_a6479d436bc544641a693f193e1be1e56}\label{class_coletor___joias_1_1_robot_a6479d436bc544641a693f193e1be1e56} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!coletar@{coletar}}
+\index{coletar@{coletar}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{coletar()}{coletar()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Robot.\+coletar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m,  }\item[{\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}}]{r }\end{DoxyParamCaption})}
+
+
+
+O método é utilizado para que o robô possa coletar joias e energia. Este verifica a posição do robô no mapa, verifica se tem algo para ser coletado nas posições adjacentes a ele e coleta os objetos, adicionando energia à variável energia e as joias a Bag (Lista de joias) do robô. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em r} & \\
+\hline
+\end{DoxyParams}
+Cria uma variável auxiliar do tipo robô para armazenar a posição do robô no mapa.
+
+Verifica a posição do robô no mapa e armazena na variável auxiliar do tipo robô.
+
+Verifica se acima está dentro dos limites do tabuleiro.
+
+Verifica se tem algo acima para ser coletado.
+
+Se for um objeto do tipo Blue\+Jewel, incrementa a energia em 5 pontos.
+
+Coleta a joia e adiciona ela a Bag do robô.
+
+Diminui 1 na quantidade de joias que falta o robô coletar no mapa.
+
+Insere \"{}-\/-\/\"{} na posição da qual a joia foi coletada.
+
+Verifica se a quantidade de joias restantes é igual a zero, e se for, passa para a próxima fase do jogo.
+
+Se for um objeto do tipo Tree, incrementa a energia em 3 pontos.
+
+Verifica se abaixo está dentro dos limites do tabuleiro.
+
+Verifica se tem algo abaixo para ser coletado.
+
+Se for um objeto do tipo Blue\+Jewel, incrementa a energia em 5 pontos.
+
+Coleta a joia e adiciona ela a Bag do robô.
+
+Diminui 1 na quantidade de joias que falta o robô coletar no mapa.
+
+Insere \"{}-\/-\/\"{} na posição da qual a joia foi coletada.
+
+Verifica se a quantidade de joias restantes é igual a zero, e se for, passa para a próxima fase do jogo.
+
+Se for um objeto do tipo Tree, incrementa a energia em 3 pontos.
+
+Verifica se a direita está dentro dos limites do tabuleiro.
+
+Verifica se tem algo a direita para ser coletado.
+
+Se for um objeto do tipo Blue\+Jewel, incrementa a energia em 5 pontos.
+
+Coleta a joia e adiciona ela a Bag do robô.
+
+Diminui 1 na quantidade de joias que falta o robô coletar no mapa.
+
+Insere \"{}-\/-\/\"{} na posição da qual a joia foi coletada.
+
+Verifica se a quantidade de joias restantes é igual a zero, e se for, passa para a próxima fase do jogo.
+
+Se for um objeto do tipo Tree, incrementa a energia em 3 pontos.
+
+Verifica se a esquerda está dentro dos limites do tabuleiro.
+
+Verifica se tem algo a esquerda para ser coletado.
+
+Se for um objeto do tipo Blue\+Jewel, incrementa a energia em 5 pontos.
+
+Coleta a joia e adiciona ela a Bag do robô.
+
+Diminui 1 na quantidade de joias que falta o robô coletar no mapa.
+
+Insere \"{}-\/-\/\"{} na posição da qual a joia foi coletada.
+
+Verifica se a quantidade de joias restantes é igual a zero, e se for, passa para a próxima fase do jogo.
+
+Se for um objeto do tipo Tree, incrementa a energia em 3 pontos.
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00255}{255}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_a2c7ef130c8a356c6ac150bd5a2929dca}\label{class_coletor___joias_1_1_robot_a2c7ef130c8a356c6ac150bd5a2929dca} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!direita@{direita}}
+\index{direita@{direita}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{direita()}{direita()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Robot.\+direita (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m,  }\item[{\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}}]{r }\end{DoxyParamCaption})}
+
+
+
+O método verifica a posição atual do robô, verifica se há algum objeto instransponível a direita dele e se não houver um objeto instransponível, ele realiza a movimentação para a direita. Este método também verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para a direita, se houver são tirados 10 pontos de energia do robô. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em r} & \\
+\hline
+\end{DoxyParams}
+Verifico a posição atual do robô no mapa
+
+Verifico se não há nenhum elemento intransponível no local para qual o robô irá se movimentar.
+
+Se a posição que o robô irá sobrepor for um elemento radioativo, o robô perde 30 pontos de energia.
+
+Insire \"{}-\/-\/\"{} na posição atual do robô.
+
+Para onde o robô vai, nova posição do robô no tabuleiro.
+
+Inclusão do robô em sua nova posição no tabuleiro.
+
+Tira energia caso seja realizada a movimentação.
+
+Quando ele tentar ultrapassar os limites do mapa ou tentar se movimentar para a posição que tem uma joia ou obstáculo, será lançada uma exceção informando que o movimento não é permitido.
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00219}{219}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_ae8f7b9d6ad83834eb07851b5b047022a}\label{class_coletor___joias_1_1_robot_ae8f7b9d6ad83834eb07851b5b047022a} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!esquerda@{esquerda}}
+\index{esquerda@{esquerda}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{esquerda()}{esquerda()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Robot.\+esquerda (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m,  }\item[{\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}}]{r }\end{DoxyParamCaption})}
+
+
+
+O método verifica a posição atual do robô, verifica se há algum objeto instransponível a esquerda dele e se não houver um objeto instransponível, ele realiza a movimentação para a esquerda. Este método também verifica se há algum objeto do tipo Radioactive nas posições adjacentes ao robô quando este se movimenta para a esquerda, se houver são tirados 10 pontos de energia do robô. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em r} & \\
+\hline
+\end{DoxyParams}
+Verifico a posição atual do robô no mapa
+
+Verifico se não há nenhum elemento intransponível no local para qual o robô irá se movimentar.
+
+Se a posição que o robô irá sobrepor for um elemento radioativo, o robô perde 30 pontos de energia.
+
+Insiro \"{}-\/-\/\"{} na posição atual do robô.
+
+Para onde o robô vai, nova posição do robô no tabuleiro.
+
+Inclusão do robô em sua nova posição no tabuleiro.
+
+Tira energia caso seja realizada a movimentação.
+
+Quando ele tentar ultrapassar os limites do mapa ou tentar se movimentar para a posição que tem uma joia ou obstáculo, será lançada uma exceção informando que o movimento não é permitido.
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00182}{182}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_aea734142ac4bf1f8264dd8a889b4d875}\label{class_coletor___joias_1_1_robot_aea734142ac4bf1f8264dd8a889b4d875} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!movimentar@{movimentar}}
+\index{movimentar@{movimentar}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{movimentar()}{movimentar()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Robot.\+movimentar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+O método sobrescreve a posição dada com um elemento do tipo Cell, com a string \"{}-\/-\/\"{} na posição anterior do robô. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00083}{83}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_a4e12b1b8b412f0f9208497a652ed6973}\label{class_coletor___joias_1_1_robot_a4e12b1b8b412f0f9208497a652ed6973} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!posicaoAtualRobo@{posicaoAtualRobo}}
+\index{posicaoAtualRobo@{posicaoAtualRobo}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{posicaoAtualRobo()}{posicaoAtualRobo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}} Coletor\+\_\+\+Joias.\+Robot.\+posicao\+Atual\+Robo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m }\end{DoxyParamCaption})}
+
+
+
+O método verifica em qual posição o robô se encontra no mapa para que seja possível realizar as movimentações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a posição \mbox{[}x,y\mbox{]} do robô no mapa.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00060}{60}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_a6ded434cf27ffdf8304a215bc2090253}\label{class_coletor___joias_1_1_robot_a6ded434cf27ffdf8304a215bc2090253} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!qtdEnergia@{qtdEnergia}}
+\index{qtdEnergia@{qtdEnergia}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{qtdEnergia()}{qtdEnergia()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Robot.\+qtd\+Energia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}}]{r }\end{DoxyParamCaption})}
+
+
+
+O método imprime a quantidade de energia armazenada pelo robô. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+\end{DoxyParams}
+Se a quantidade de energia for maior ou igual a zero, exibir a quantidade de energia.
+
+Se não, exibir que a energia é igual a zero.
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00372}{372}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_aa913eb63d96a844cb5482854943e82e4}\label{class_coletor___joias_1_1_robot_aa913eb63d96a844cb5482854943e82e4} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!qtdTotal@{qtdTotal}}
+\index{qtdTotal@{qtdTotal}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{qtdTotal()}{qtdTotal()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Robot.\+qtd\+Total (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}}]{r }\end{DoxyParamCaption})}
+
+
+
+O método realiza a contagem de todas as joias armazenadas na Bag do robô e imprime a quantidade total das joias coletadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00362}{362}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_a2a240eec3141eea03485926f6cef87f0}\label{class_coletor___joias_1_1_robot_a2a240eec3141eea03485926f6cef87f0} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!tiraEnergia@{tiraEnergia}}
+\index{tiraEnergia@{tiraEnergia}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{tiraEnergia()}{tiraEnergia()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Robot.\+tira\+Energia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}}]{r }\end{DoxyParamCaption})}
+
+
+
+O método tira 1 ponto de energia do robô a cada movimentação realizada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00095}{95}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_aba4b82040cd0bdcfc22b7f2c74b13a26}\label{class_coletor___joias_1_1_robot_aba4b82040cd0bdcfc22b7f2c74b13a26} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!ToString@{ToString}}
+\index{ToString@{ToString}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Coletor\+\_\+\+Joias.\+Robot.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Este método sobrescreve o To\+String(). 
+
+\begin{DoxyReturn}{Returns}
+Um Robot é representado no mapa pelos caracteres ME.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00050}{50}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_a1e7b6ebb41027eafcbf6175828dae733}\label{class_coletor___joias_1_1_robot_a1e7b6ebb41027eafcbf6175828dae733} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!valorTotal@{valorTotal}}
+\index{valorTotal@{valorTotal}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{valorTotal()}{valorTotal()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Robot.\+valor\+Total (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}}]{r }\end{DoxyParamCaption})}
+
+
+
+O método realiza a soma de todas as joias armazenadas na Bag do robô e imprime o valor total das joias coletadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00348}{348}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_af57cfa955a0c19b7cd01f6a92eced49a}\label{class_coletor___joias_1_1_robot_af57cfa955a0c19b7cd01f6a92eced49a} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!verificaRadioativo@{verificaRadioativo}}
+\index{verificaRadioativo@{verificaRadioativo}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{verificaRadioativo()}{verificaRadioativo()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Robot.\+verifica\+Radioativo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m,  }\item[{\mbox{\hyperlink{class_coletor___joias_1_1_robot}{Robot}}}]{r }\end{DoxyParamCaption})}
+
+
+
+O método utiliza a posição do robô no mapa e verifica se há elemento radioativo nas posições adjacentes ao robô, se houver algum elemento radioativo nas posições adjacentes são retirados 10 pontos de energia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+{\em r} & \\
+\hline
+\end{DoxyParams}
+Cria uma variável auxiliar do tipo robô para armazenar a posição do robô no mapa.
+
+Verifica a posição do robô no mapa e armazena na variável auxiliar do tipo robô.
+
+Verifica se acima está dentro dos limites do tabuleiro.
+
+Verifica se tem algum elemento acima do tipo Radioactive.
+
+Verifica se abaixo está dentro dos limites do tabuleiro.
+
+Verifica se tem algum elemento abaixo do tipo Radioactive.
+
+Verifica se a esquerda está dentro dos limites do tabuleiro.
+
+Verifica se tem algum elemento a esquerda do tipo Radioactive.
+
+Verifica se a esquerda está dentro dos limites do tabuleiro.
+
+Verifica se tem algum elemento a direita do tipo Radioactive.
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00317}{317}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_coletor___joias_1_1_robot_a1c421f8bc0beea6b32b717e78804e7b4}\label{class_coletor___joias_1_1_robot_a1c421f8bc0beea6b32b717e78804e7b4} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!Bag@{Bag}}
+\index{Bag@{Bag}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{Bag}{Bag}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_coletor___joias_1_1_jewel}{Jewel}}$>$ Coletor\+\_\+\+Joias.\+Robot.\+Bag\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+O atributo Bag representa uma lista de joias que armazena as informações relacionas as joias que foram coletadas pelo robô, sendo essas informações o valor total e a quantidade de joias. 
+
+Retorna uma lista do tipo Jewel.
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_robot_af43649f7d10aa7853ce15c8a49475aba}\label{class_coletor___joias_1_1_robot_af43649f7d10aa7853ce15c8a49475aba} 
+\index{Coletor\_Joias.Robot@{Coletor\_Joias.Robot}!energia@{energia}}
+\index{energia@{energia}!Coletor\_Joias.Robot@{Coletor\_Joias.Robot}}
+\doxysubsubsection{\texorpdfstring{energia}{energia}}
+{\footnotesize\ttfamily int Coletor\+\_\+\+Joias.\+Robot.\+energia\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+O robô pode coletar energia dos obstáculos que são do tipo Tree, das joias que são do tipo Blue\+Jewel e perde parte de sua energia ao passar em posições adjacentes ou ao transpor objetos do tipo Radioactive. 
+
+Retorna quanta energia armazenada o robô tem.
+
+Definition at line \mbox{\hyperlink{_robot_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_robot_8cs_source}{Robot.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_robot_8cs}{Robot.\+cs}}\end{DoxyCompactItemize}

@@ -13,5 +13,6 @@ var hierarchy =
       ] ],
       [ "Coletor_Joias.Robot", "class_coletor___joias_1_1_robot.html", null ]
     ] ],
+    [ "Coletor", "class_coletor.html", null ],
     [ "Coletor_Joias.Map", "class_coletor___joias_1_1_map.html", null ]
 ];

@@ -1,0 +1,213 @@
+\doxysection{Coletor\+\_\+\+Joias.\+Map Class Reference}
+\hypertarget{class_coletor___joias_1_1_map}{}\label{class_coletor___joias_1_1_map}\index{Coletor\_Joias.Map@{Coletor\_Joias.Map}}
+
+
+A classe Map representa o tabuleiro do jogo, este é representado por uma matriz de duas dimensões, e representa o espaço no qual o robô se desloca para coletar joias e energia. Esta classe armazena todas as informações dos elementos do mapa.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} \mbox{\hyperlink{class_coletor___joias_1_1_map_a9151944fcd5d0b39fbb0c3de770b6051}{inicio\+Jogo}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m)
+\begin{DoxyCompactList}\small\item\em Este método atribui objetos do tipo Cell a todas as posições do mapa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_map_a79bce90dada74b7c586457500e1e41ba}{mostra\+Mapa}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m)
+\begin{DoxyCompactList}\small\item\em Este método imprime todas as posições do mapa, a partir dos métodos sobrescritos To\+String de cada elemento que faz parte do mapa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_map_add953b04d40815c5e580740240c2fdba}{tabuleiro\+Fase1}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m)
+\begin{DoxyCompactList}\small\item\em Este método posiciona todos os elementos da fase 1 no mapa, as joias, obstáculos e o robô. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_map_a24fd648c4621a7912358bcc522269af6}{tabuleiro\+Proxima\+Fase}} (\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} m)
+\begin{DoxyCompactList}\small\item\em Este método posiciona todos os elementos das fases 2 em diante no mapa, as joias, obstáculos e o robô. A partir da segunda fase, os elementos são posicionados de maneira aleatória no mapa, portanto foi analisada a proporção de cada elemento na fase inicial e esta mesma proporção de quantidade foi replicada para os elementos de cada tipo nas fases seguintes. Este método aumenta as dimensões do mapa em 1 unidade a cada nova fase do jogo até o limite de 30x30 de tamanho. Este método também imprime na tela uma mensagem quando o jogador passa de fase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coletor___joias_1_1_map_a34915415898861bf0a57dbdaff880a05}{instrucoes\+Fase2}} ()
+\begin{DoxyCompactList}\small\item\em O método imprime na tela as instruções para a fase 2 do jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_coletor___joias_1_1_map_a5d1aeeec2417d0e3bf2885d09193d2f2}{fase\+Atual}} = 1
+\begin{DoxyCompactList}\small\item\em O mapa mantém um controle de qual fase o jogo está, e este atributo é inicializado em 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}}\mbox{[},\mbox{]} \mbox{\hyperlink{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}{tabuleiro}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em O tabuleiro representa uma matriz de duas dimensões. O tabuleiro armazena elementos do tipo Cell, como todos os elementos herdam da super\+Classe Cell, o mapa acomoda os elementos do tipo Jewel, Robot e Obstacle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}{qtd\+Jewel}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em O mapa mantém uma contagem de quantas joias ainda não foram coletadas, quando o contador é igual a zero, se inicia a próxima fase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe Map representa o tabuleiro do jogo, este é representado por uma matriz de duas dimensões, e representa o espaço no qual o robô se desloca para coletar joias e energia. Esta classe armazena todas as informações dos elementos do mapa. 
+
+Definition at line \mbox{\hyperlink{_map_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_map_8cs_source}{Map.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_coletor___joias_1_1_map_a9151944fcd5d0b39fbb0c3de770b6051}\label{class_coletor___joias_1_1_map_a9151944fcd5d0b39fbb0c3de770b6051} 
+\index{Coletor\_Joias.Map@{Coletor\_Joias.Map}!inicioJogo@{inicioJogo}}
+\index{inicioJogo@{inicioJogo}!Coletor\_Joias.Map@{Coletor\_Joias.Map}}
+\doxysubsubsection{\texorpdfstring{inicioJogo()}{inicioJogo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}} Coletor\+\_\+\+Joias.\+Map.\+inicio\+Jogo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Este método atribui objetos do tipo Cell a todas as posições do mapa. 
+
+\begin{DoxyReturn}{Returns}
+Este método retorna o mapa que da início ao jogo. A matriz que da início ao jogo tem tamanho \mbox{[}10,10\mbox{]}.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_map_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_map_8cs_source}{Map.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_map_a34915415898861bf0a57dbdaff880a05}\label{class_coletor___joias_1_1_map_a34915415898861bf0a57dbdaff880a05} 
+\index{Coletor\_Joias.Map@{Coletor\_Joias.Map}!instrucoesFase2@{instrucoesFase2}}
+\index{instrucoesFase2@{instrucoesFase2}!Coletor\_Joias.Map@{Coletor\_Joias.Map}}
+\doxysubsubsection{\texorpdfstring{instrucoesFase2()}{instrucoesFase2()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Map.\+instrucoes\+Fase2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+O método imprime na tela as instruções para a fase 2 do jogo. 
+
+
+
+Definition at line \mbox{\hyperlink{_map_8cs_source_l00249}{249}} of file \mbox{\hyperlink{_map_8cs_source}{Map.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_map_a79bce90dada74b7c586457500e1e41ba}\label{class_coletor___joias_1_1_map_a79bce90dada74b7c586457500e1e41ba} 
+\index{Coletor\_Joias.Map@{Coletor\_Joias.Map}!mostraMapa@{mostraMapa}}
+\index{mostraMapa@{mostraMapa}!Coletor\_Joias.Map@{Coletor\_Joias.Map}}
+\doxysubsubsection{\texorpdfstring{mostraMapa()}{mostraMapa()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Map.\+mostra\+Mapa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Este método imprime todas as posições do mapa, a partir dos métodos sobrescritos To\+String de cada elemento que faz parte do mapa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_map_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_map_8cs_source}{Map.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_map_add953b04d40815c5e580740240c2fdba}\label{class_coletor___joias_1_1_map_add953b04d40815c5e580740240c2fdba} 
+\index{Coletor\_Joias.Map@{Coletor\_Joias.Map}!tabuleiroFase1@{tabuleiroFase1}}
+\index{tabuleiroFase1@{tabuleiroFase1}!Coletor\_Joias.Map@{Coletor\_Joias.Map}}
+\doxysubsubsection{\texorpdfstring{tabuleiroFase1()}{tabuleiroFase1()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Map.\+tabuleiro\+Fase1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Este método posiciona todos os elementos da fase 1 no mapa, as joias, obstáculos e o robô. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_map_8cs_source_l00094}{94}} of file \mbox{\hyperlink{_map_8cs_source}{Map.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_map_a24fd648c4621a7912358bcc522269af6}\label{class_coletor___joias_1_1_map_a24fd648c4621a7912358bcc522269af6} 
+\index{Coletor\_Joias.Map@{Coletor\_Joias.Map}!tabuleiroProximaFase@{tabuleiroProximaFase}}
+\index{tabuleiroProximaFase@{tabuleiroProximaFase}!Coletor\_Joias.Map@{Coletor\_Joias.Map}}
+\doxysubsubsection{\texorpdfstring{tabuleiroProximaFase()}{tabuleiroProximaFase()}}
+{\footnotesize\ttfamily void Coletor\+\_\+\+Joias.\+Map.\+tabuleiro\+Proxima\+Fase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_coletor___joias_1_1_map}{Map}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Este método posiciona todos os elementos das fases 2 em diante no mapa, as joias, obstáculos e o robô. A partir da segunda fase, os elementos são posicionados de maneira aleatória no mapa, portanto foi analisada a proporção de cada elemento na fase inicial e esta mesma proporção de quantidade foi replicada para os elementos de cada tipo nas fases seguintes. Este método aumenta as dimensões do mapa em 1 unidade a cada nova fase do jogo até o limite de 30x30 de tamanho. Este método também imprime na tela uma mensagem quando o jogador passa de fase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+Incrementa o contador da fase em 1 unidade e imprime na tela uma mensagem quando o jogador passa de fase.
+
+Aumenta as dimensões do mapa em 1 unidade a cada nova fase do jogo.
+
+Coloca um objeto do tipo Cell em cada posição do mapa.
+
+Inicializa o robô no mapa na posição \mbox{[}0,0\mbox{]}.
+
+Inicializa os elementos do tipo Water no mapa a partir da geração de números aleatórios para a posição \mbox{[}x,y\mbox{]} na matriz. A partir do cálculo da porporção de elementos do tipo Water dispostos na primeira fase do jogo, a mesma proporção é repetida para todas as outras fases, levando em conta o tamanho total da matriz de cada fase.
+
+Verifica se existe algum elemento já colocado na posição aleatória que foi criada.
+
+Inicializa os elementos do tipo Tree no mapa a partir da geração de números aleatórios para a posição \mbox{[}x,y\mbox{]} na matriz. A partir do cálculo da porporção de elementos do tipo Tree dispostos na primeira fase do jogo, a mesma proporção é repetida para todas as outras fases, levando em conta o tamanho total da matriz de cada fase.
+
+Verifica se existe algum elemento já colocado na posição aleatória que foi criada.
+
+Inicializa os elementos do tipo Red\+Jewel no mapa a partir da geração de números aleatórios para a posição \mbox{[}x,y\mbox{]} na matriz. A partir do cálculo da porporção de elementos do tipo Red\+Jewel dispostos na primeira fase do jogo, a mesma proporção é repetida para todas as outras fases, levando em conta o tamanho total da matriz de cada fase.
+
+Verifica se existe algum elemento já colocado na posição aleatória que foi criada.
+
+Inicializa os elementos do tipo Green\+Jewel no mapa a partir da geração de números aleatórios para a posição \mbox{[}x,y\mbox{]} na matriz. A partir do cálculo da porporção de elementos do tipo Green\+Jewel dispostos na primeira fase do jogo, a mesma proporção é repetida para todas as outras fases, levando em conta o tamanho total da matriz de cada fase.
+
+Verifica se existe algum elemento já colocado na posição aleatória que foi criada.
+
+Inicializa os elementos do tipo Blue\+Jewel no mapa a partir da geração de números aleatórios para a posição \mbox{[}x,y\mbox{]} na matriz. A partir do cálculo da porporção de elementos do tipo Blue\+Jewel dispostos na primeira fase do jogo, a mesma proporção é repetida para todas as outras fases, levando em conta o tamanho total da matriz de cada fase.
+
+Verifica se existe algum elemento já colocado na posição aleatória que foi criada.
+
+Inicializa os elementos do tipo Radioactive no mapa a partir da geração de números aleatórios para a posição \mbox{[}x,y\mbox{]} na matriz. Este elemento é inserido no mapa a partir da fase 2. São inseridos 2 elementos deste tipo no mapa na fase 2, e a mesma proporção é repetida para todas as outras fases, levando em conta o tamanho total da matriz de cada fase.
+
+Verifica se existe algum elemento já colocado na posição aleatória que foi criada.
+
+Definition at line \mbox{\hyperlink{_map_8cs_source_l00156}{156}} of file \mbox{\hyperlink{_map_8cs_source}{Map.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_coletor___joias_1_1_map_a5d1aeeec2417d0e3bf2885d09193d2f2}\label{class_coletor___joias_1_1_map_a5d1aeeec2417d0e3bf2885d09193d2f2} 
+\index{Coletor\_Joias.Map@{Coletor\_Joias.Map}!faseAtual@{faseAtual}}
+\index{faseAtual@{faseAtual}!Coletor\_Joias.Map@{Coletor\_Joias.Map}}
+\doxysubsubsection{\texorpdfstring{faseAtual}{faseAtual}}
+{\footnotesize\ttfamily int Coletor\+\_\+\+Joias.\+Map.\+fase\+Atual = 1}
+
+
+
+O mapa mantém um controle de qual fase o jogo está, e este atributo é inicializado em 1. 
+
+
+
+Definition at line \mbox{\hyperlink{_map_8cs_source_l00032}{32}} of file \mbox{\hyperlink{_map_8cs_source}{Map.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6}\label{class_coletor___joias_1_1_map_a9f0693e4ad7904bc3a319dedbbb467e6} 
+\index{Coletor\_Joias.Map@{Coletor\_Joias.Map}!qtdJewel@{qtdJewel}}
+\index{qtdJewel@{qtdJewel}!Coletor\_Joias.Map@{Coletor\_Joias.Map}}
+\doxysubsubsection{\texorpdfstring{qtdJewel}{qtdJewel}}
+{\footnotesize\ttfamily int Coletor\+\_\+\+Joias.\+Map.\+qtd\+Jewel\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+O mapa mantém uma contagem de quantas joias ainda não foram coletadas, quando o contador é igual a zero, se inicia a próxima fase. 
+
+Retorna a quantidade de joias que ainda não foram coletadas pelo robô.
+
+Definition at line \mbox{\hyperlink{_map_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_map_8cs_source}{Map.\+cs}}.
+
+\Hypertarget{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e}\label{class_coletor___joias_1_1_map_aa39bd5d7efd7e2d3fa992799e4175e2e} 
+\index{Coletor\_Joias.Map@{Coletor\_Joias.Map}!tabuleiro@{tabuleiro}}
+\index{tabuleiro@{tabuleiro}!Coletor\_Joias.Map@{Coletor\_Joias.Map}}
+\doxysubsubsection{\texorpdfstring{tabuleiro}{tabuleiro}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_coletor___joias_1_1_cell}{Cell}} \mbox{[},\mbox{]} Coletor\+\_\+\+Joias.\+Map.\+tabuleiro\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+O tabuleiro representa uma matriz de duas dimensões. O tabuleiro armazena elementos do tipo Cell, como todos os elementos herdam da super\+Classe Cell, o mapa acomoda os elementos do tipo Jewel, Robot e Obstacle. 
+
+O tabuleiro retorna uma matriz do tipo Cell. 
+
+Definition at line \mbox{\hyperlink{_map_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_map_8cs_source}{Map.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_map_8cs}{Map.\+cs}}\end{DoxyCompactItemize}
