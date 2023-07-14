@@ -1,4 +1,5 @@
 **Projeto Final - Parte 1**
+
 Desenvolva o minigame chamado Jewel Collector. O objetivo desse jogo é que um robô, controlado pelo teclado, se desloque por um mapa 2D de modo a desviar dos obstáculos e coletar todas as joias. 
 As joias poderão ser Red, no valor de 100 pontos; Green, no valor de 50 pontos; e Blue, no valor de 10 pontos.
 Os obstáculos podem ser Water ou Tree.
@@ -14,6 +15,7 @@ Uma joia somente poderá ser coletada se o robô estiver em uma das posições a
 Inicie o jogo, isto é, leia o teclado e colete todas as joias e desvie dos obstáculos interativamente.
 
 **Projeto Final - Parte 2**
+
 Desenvolva o minigame Jewel Collector 2.0, implementado previamente na aula 2. 
 O objetivo dessa nova versão é melhorar o código anterior através da implementação dos novos conceitos e recursos aprendidos até o momento. 
 
